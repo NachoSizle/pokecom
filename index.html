@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta name="encoding" charset="UTF-8">
+    <!--Let browser know description about this site-->
+    <meta name="description" content="Página web de noticias sobre Pokemon GO de forma actualizada."/>
+    <!--Let browser know author about this site-->
+    <meta name="author" content="NachoSizle, nachosizle@pokecom.es"/>
+    <!--Let browser know keywords about this site-->
+    <meta name="keywords" content="pokecom, pokemon, pokemon go, noticias pokemon go, noticias" />
+    <!--Title of page-->
+    <title>PokeCom</title>
+
+    <!--Import some fonts-->
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Dosis:500,400'>
+  	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
+  	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pattaya">
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="Materialize/css/materialize.min.css"  media="screen,projection"/>
+
+    <!--FavIcon to browser-->
+    <link rel="icon" type="image/png" href='Images/pokeball.png' />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--Import stylePreloader.css-->
+    <link type="text/css" rel="stylesheet" href="Style/stylePreloader.css"  media="screen,projection"/>
+
+    <!--Import styleNav.css-->
+    <link type="text/css" rel="stylesheet" href="Style/styleNav.css"  media="screen,projection"/>
+
+  </head>
+  <!--<body style="overflow: hidden" onload="ppalesActions()">-->
+  <body>
+    
+    <img id="pkBallLoader" class='responsive-img col s12 l12 m12' src='../Images/pokeball.png'>
+
+    <!--NAVBAR-->
+  	<nav>
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo center">PokeCom</a>
+        <a id="iconHamburguer" href="#" data-activates="menuMvlVersion" class="button-collapse">
+        	<i class="material-icons" onclick="Materialize.showStaggeredList('#menuMvlVersion');">menu</i>
+        </a>
+      <!--NAVBAR DESKTOP-->
+      <ul id="menuDesktopVersion" class="right hide-on-med-and-down">
+        <li><a onclick="redirec(1)"><i class="material-icons">av_timer</i></a></li>
+        <li><a onclick="redirec(2)"><i class="material-icons">announcement</i></a></li>
+        <li><a onclick="redirec(3)"><i class="material-icons">contacts</i></a></li>
+        <li><a onclick="redirec(4)"><i class="material-icons">camera_enhance</i></a></li>
+        <!--
+        <li><a onclick="redirec(4)"><i class="material-icons">open_in_browser</i></a></li>
+        -->
+      </ul>
+      <!--NAVBAR DESKTOP-->
+      <!--NAVBAR MOVILES-->
+      <ul id="menuMvlVersion" class="side-nav collection">
+          <li class="collection-item center-align" onclick="redirec(1)">
+            <a><i class="material-icons">av_timer</i></a>
+            <span class="title"><p>News</p></span>
+          </li>
+          <li class="collection-item center-align" onclick="redirec(2)">
+            <a><i class="material-icons">announcement</i></a>
+            <span class="title"><p>Send Email</p></span>
+          </li>
+          <li class="collection-item center-align" onclick="redirec(3)">
+            <a><i class="material-icons">contacts</i></a>
+            <span class="title"><p>Authors</p></span>
+          </li>
+          <li class="collection-item center-align" onclick="redirec(4)">
+            <a><i class="material-icons">camera_enhance</i></a>
+            <span class="title"><p>Video</p></span>
+          </li>
+          <!--
+          <li class="collection-item center-align" onclick="redirec(4)">
+            <a><i class="material-icons">open_in_browser</i></a>
+            <span class="title"><p>Upload Photo</p></span>
+          </li>
+          -->
+      </ul>
+      <!--NAVBAR MOVILES-->
+      </div>
+  	</nav>
+  	<!--NAVBAR-->
+  	
+  	<!--MAIN CONTAINER OF NEWS-->
+  	<div id="contPpal" class="row col s12">
+  	</div>
+  	<!--CONTAINER PPAL-->
+
+  	<!--FOOTER-->
+  	<footer class="page-footer">
+      <div class="container">
+        <div class="col l6 s12">
+          <h5 class="white-text">PokeCom</h5>
+          <a id="btnNavToInit" onclick="backToInitPage()" class="btn-floating waves-effect waves-light red accent-3 right z-depth-0 hide-on-large-only hoverable"><i class="material-icons">navigation</i></a>
+          <p class="grey-text text-lighten-4">Spanish community of Pokemon GO</p>
+        </div>
+      </div>
+      <div id="footerContact" class="row footer-copyright">
+        <div class="container">
+          NachoSizle © 2016 Copyright Text
+          <a id="contactLink" onclick="createmodalAndLaunch()" class="modal-trigger grey-text text-lighten-4 right"><i class="material-icons">email</i></a>
+        </div>
+      </div>
+    </footer>
+  	<!--FOOTER-->
+
+    <script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
+    
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCerWnf2nCqqDK0KPxjPahFImieG6PsHGA",
+        authDomain: "pokecom-96278.firebaseapp.com",
+        databaseURL: "https://pokecom-96278.firebaseio.com",
+        storageBucket: "",
+        messagingSenderId: "477775477727"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../Materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../JS/commonCode.js"></script>
+    <script type="text/javascript" src="../JS/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,17 @@
+#shareContainer h4{
+	font-family: "Pattaya";	
+	color: #757575;
+}
+
+#shareContainer iframe{
+	margin-right: 10px;
+}
+
+#newsContainer{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.imgDataNew{
+	margin-top: 20px;
+}

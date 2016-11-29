@@ -1,0 +1,70 @@
+body{
+    background-color: #ee6e73; 
+}
+
+.nav-wrapper{
+    background-color: #FF1744;
+}
+
+.brand-logo{
+    font-family: "Pattaya";
+    font-size: 40px;
+    text-shadow: -2px 2px 1px #01579b;
+}
+
+#menuMvlVersion{
+     width: 250px;
+     background-color: #FF1744;
+}
+
+#menuMvlVersion li{
+     background-color: #FF1744;
+     padding-left:0;
+     padding-right:0;
+     color: #ffd54f;
+     text-shadow: -2px 2px 1px #01579b;
+}
+
+#menuMvlVersion i{
+     padding-left: 95px;
+     color: #ffd54f;
+}
+
+#iconHamburguer{
+     color: #ffd54f;
+     padding-left: 10px;
+}
+
+#menuMvlVersion span{
+     font-family: "Pattaya";
+     font-size: 20px;
+}
+
+.page-footer{
+     padding-top: 10px;
+}
+
+#btnNavToInit{
+     position: relative;
+     bottom: 8px;
+}
+
+#btnNavToInit i{
+     color: #ffd54f;
+     text-shadow: 0px 2px 1px #01579b;
+}
+
+#contactLink{
+     position: relative;
+     top: 7px;
+     right: 6.5px;
+}
+
+#footerContact{
+     background-color: #FF1744;
+}
+
+#footerContact i{
+     color: #ffd54f;
+     text-shadow: 0px 2px 1px #01579b;
+}    
